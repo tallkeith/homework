@@ -6,12 +6,11 @@ require 'homework/version'
 Gem::Specification.new do |spec|
   spec.name          = "homework"
   spec.version       = Homework::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["redline6561@gmail.com"]
+  spec.authors       = ["Brit Butler"]
+  spec.email         = ["brit@theironyard.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A simple homework assignment tool a team of students.}
+  spec.homepage      = "https://github.com/TIY-ATL-ROR-2016-Feb/homework"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
