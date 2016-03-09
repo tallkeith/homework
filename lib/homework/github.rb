@@ -41,3 +41,7 @@ module Homework
       Github.post("/repos/#{org}/issues/#{issue_num}", headers: @headers, body: {"body" => "#{comment}"}.to_json)
   end
 end
+
+github = Homework::Github.new
+
+binding.pry
