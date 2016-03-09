@@ -28,5 +28,16 @@ module Homework
     def list_team_members(team_id)
       Github.get("/teams/#{team_id}/members", headers: @headers)
     end
+
+    def list_issues(owner, repo)
+      Github.get("/repos/#{owner}/#{repo}/issues")
+    end
+
+    def close_issue(org, issue_num)
+      Github.patch("/repos/#{org}/issues/#{issue_num.to_i}", headers: @headers, body: {"state" => "closed"}.to_json)
+    end
+
+    def comment_on_issue(org, issue_num, comment)
+      Github.post("/repos/#{org}/issues/#{issue_num}", headers: @headers, body: {"body" => "#{comment}"}.to_json)
   end
 end
